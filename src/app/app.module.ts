@@ -12,6 +12,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from '@angular/flex-layout';
+import { SideNavComponent } from './layouts/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CoreModule } from '@angular/flex-layout';
     FooterComponent,
     ContentLayoutComponent,
     NavComponent,
+    SideNavComponent,
   ],
   imports: [
     //angular

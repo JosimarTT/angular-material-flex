@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <div class="mat-app-background">
     <app-nav></app-nav>
 
@@ -8,4 +8,16 @@
 
     <app-footer></app-footer>
   </div>
-</div>
+</div> -->
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <app-side-nav (sidenavClose)="sidenav.close()"></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-nav (sidenavToggle)="sidenav.toggle()"></app-nav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
