@@ -10,6 +10,8 @@ import { ContentLayoutComponent } from './layouts/content-layout/content-layout.
 import { NavComponent } from './layouts/nav/nav.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './modules/home/home.module';
+import { CoreModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,10 @@ import { SharedModule } from './shared/shared.module';
 
     //modules
     AuthModule,
+    HomeModule,
 
     //core & shared
+    CoreModule,
     SharedModule
   ],
   exports: [
