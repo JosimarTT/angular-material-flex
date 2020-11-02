@@ -1,0 +1,25 @@
+<mat-card fxFlex="400px" fxFlex.xs="300px">
+  <mat-card-title fxLayoutAlign="center">Login</mat-card-title>
+  <br />
+  <mat-card-content fxLayout="column">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Username">
+      <mat-icon matSuffix>account_circle</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password">
+      <mat-icon matSuffix>lock</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </mat-card-content>
+  <button mat-raised-button color="primary">Login</button>
+  <br />
+  <br />
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <a mat-button href="">Register now!</a>
+    <a mat-button href="">Forgot password?</a>
+  </div>
+</mat-card>
