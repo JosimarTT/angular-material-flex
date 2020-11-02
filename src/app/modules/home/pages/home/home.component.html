@@ -1,46 +1,59 @@
-<!-- <mat-card fxFlex fxFlex-gt-xs="100" fxFlex="33.33%">
-  <h2>Card title #1</h2>
-  <mat-card-content>
-    <p>Some content</p>
-  </mat-card-content>
-</mat-card>
-<mat-card fxFlex fxFlex-gt-xs="100" fxFlex="33.33%">
-  <h2>Card title #2</h2>
-  <mat-card-content>
-    <p>Some content</p>
-  </mat-card-content>
-</mat-card>
-<mat-card fxFlex fxFlex-gt-xs="100" fxFlex="33.33%">
-  <h2>Card title #3</h2>
-  <mat-card-content>
-    <p>Some content</p>
-  </mat-card-content>
-</mat-card>
-<mat-card fxFlex fxFlex-gt-xs="100" fxFlex="33.33%">
-  <h2>Card title #4</h2>
-  <mat-card-content>
-    <p>Some content</p>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <h2>Card title #5</h2>
-  <mat-card-content>
-    <p>Some content</p>
-  </mat-card-content>
-</mat-card> -->
-
-
-<div class="container" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">
+<!-- <div class="container" fxLayout="column" fxLayout.md="row" fxLayoutGap="20px">
   <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50"
     fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card1</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card2</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card3</div>
   </div>
   <div class="cardWrap" fxLayout.lt-md="column" fxLayout.md="column" fxLayout="row" fxFlex.md="50"
     fxLayoutAligmnet="space-between center" fxLayoutGap="20px">
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
-    <div fxFlex.lt-md="100" fxFlex="35">Card</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card4</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card5</div>
+    <div class="democard" fxFlex.lt-md="100" fxFlex="35">Card6</div>
   </div>
+</div> -->
+
+
+<div class="bounds">
+
+  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+    <div fxFlex="25" class="sec1" fxFlex.xs="55">
+      first-section
+    </div>
+    <div fxFlex="25" class="sec2">
+      second-section
+    </div>
+    <div fxFlex="25" class="sec3" fxFlex.xs="15">
+      third-section
+    </div>
+  </div>
+  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+
+    <div fxFlex="75" fxFlex.xs="15">
+      <mat-table [dataSource]="dataSource">
+        <!-- User name Definition -->
+        <ng-container matColumnDef="username">
+          <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.position}} </mat-cell>
+        </ng-container>
+
+        <!-- Age Definition -->
+        <ng-container matColumnDef="age">
+          <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Title Definition -->
+        <ng-container matColumnDef="title">
+          <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.symbol}} </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="['username', 'age', 'title']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['username', 'age', 'title']"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+
 </div>
