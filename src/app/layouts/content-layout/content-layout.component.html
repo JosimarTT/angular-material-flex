@@ -5,11 +5,11 @@
   <mat-sidenav-content>
     <app-nav (sidenavToggle)="sidenav.toggle()"></app-nav>
     <main>
-      <div fxFlex=""></div>
-      <div fxFlex="80">
+      <div fxFlex></div>
+      <div fxFlex="75" fxFlex.md="100" fxFlex.xs="100">
         <router-outlet></router-outlet>
       </div>
-      <div fxFlex=""></div>
+      <div fxFlex></div>
     </main>
     <app-footer></app-footer>
   </mat-sidenav-content>

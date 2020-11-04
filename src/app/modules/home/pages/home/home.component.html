@@ -1,51 +1,73 @@
-<div class="bounds">
+<mat-card class="mat-elevation-z8">
   <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
     fxLayoutGap="20px">
-    <div fxFlex="">
-      <mat-form-field appearance="outline" fxFlexFill>
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      </mat-form-field>
-    </div>
-    <div fxFlex="">
-      <mat-form-field appearance="outline" fxFlexFill>
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      </mat-form-field>
-    </div>
-    <div fxFlex="">
-      <mat-form-field appearance="outline" fxFlexFill>
-        <mat-label>Outline form field</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      </mat-form-field>
-    </div>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker1">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker2">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
   </div>
 
-  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center">
-    <div fxFlex="">
-      <mat-table [dataSource]="dataSource">
-        <ng-container matColumnDef="username">
-          <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row.position}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="age">
-          <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="title">
-          <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row.symbol}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="weight">
-          <mat-header-cell *matHeaderCellDef> weight </mat-header-cell>
-          <mat-cell *matCellDef="let row"> {{row.weight}} </mat-cell>
-        </ng-container>
-        <mat-header-row *matHeaderRowDef="['username', 'age', 'title','weight']"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: ['username', 'age', 'title','weight']"></mat-row>
-      </mat-table>
-    </div>
+  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
+    fxLayoutGap="20px">
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
   </div>
+
+  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
+    fxLayoutGap="20px">
+    <button mat-raised-button color="primary" fxFlex fxFlexFill>Add User</button>
+    <button mat-raised-button color="primary" fxFlex fxFlexFill>Clean Content</button>
+    <button mat-raised-button color="primary" fxFlex fxFlexFill>Search</button>
+  </div>
+</mat-card>
+
+<br />
+
+<div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center">
+  <mat-table fxFlex [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.position}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.symbol}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> weight </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.weight}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="['username', 'age', 'title','weight']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['username', 'age', 'title','weight']"></mat-row>
+  </mat-table>
 </div>
