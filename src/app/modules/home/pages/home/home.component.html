@@ -77,7 +77,10 @@
   <form [formGroup]="simpleForm">
     <input placeholder="Name" matInput formControlName="name" />
     <app-shared-select (onComponentReady)="addChild('selectGroup', $event)" (selectChanged)="showOption($event)"
-      [options]="options" required notEmpty>
+      [options]="options" title="Select Category" required notEmpty>
+    </app-shared-select>
+    <app-shared-select (onComponentReady)="addChild('selectGroup2', $event)" [options]="subcategory2"
+      title="Select Subcategory" required notEmpty>
     </app-shared-select>
   </form>
 

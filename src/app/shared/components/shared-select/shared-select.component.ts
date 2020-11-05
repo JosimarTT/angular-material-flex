@@ -26,6 +26,7 @@ export class SharedSelectComponent implements OnInit {
   get notEmpy() { return this._notEmpy; }
   set notEmpy(value: any) { this._notEmpy = coerceBooleanProperty(value); }
 
+  @Input() title: string;
 
   @Output() selectChanged: EventEmitter<any> = new EventEmitter();
 
@@ -54,6 +55,7 @@ export class SharedSelectComponent implements OnInit {
     if (this.required) {
       validators.push(Validators.required)
     }
+    validators.push(Validators.min(1))
     this.componentFormGroup = this.fb.group({
       select: ['', validators]
     });

@@ -1,7 +1,8 @@
 <form [formGroup]="componentFormGroup">
   <mat-form-field>
-    <mat-select placeholder="Simple Select" formControlName="select">
-      <mat-option *ngFor="let opt of options" [value]="opt">
+    <mat-label>{{title}}</mat-label>
+    <mat-select formControlName="select">
+      <mat-option *ngFor="let opt of options" [value]="opt.id">
         {{opt.name}}
       </mat-option>
     </mat-select>
@@ -10,6 +11,9 @@
     </mat-error>
     <mat-error *ngIf="!(options || options.length)">
       Option list is empty.
+    </mat-error>
+    <mat-error *ngIf="componentFormGroup.controls.select.hasError('min')">
+      Invalid value.
     </mat-error>
   </mat-form-field>
 </form>

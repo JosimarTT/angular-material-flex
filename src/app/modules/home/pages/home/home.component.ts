@@ -31,10 +31,22 @@ export class HomeComponent implements OnInit {
   dataSource = ELEMENT_DATA;
 
   options: SimpleOption[] = [
+    { id: '0', name: 'All' },
     { id: '7', name: 'Option1' },
     { id: '10', name: 'Option2' },
     { id: '16', name: 'Option3' }
   ];
+
+  subcategory: { id: string, name: string, categoryId: string }[] = [
+    { id: '10', name: 'Option10', categoryId: '7' },
+    { id: '20', name: 'Option20', categoryId: '7' },
+    { id: '30', name: 'Option30', categoryId: '10' },
+    { id: '40', name: 'Option40', categoryId: '10' },
+    { id: '50', name: 'Option50', categoryId: '16' },
+    { id: '60', name: 'Option60', categoryId: '16' }
+  ];
+
+  subcategory2: SimpleOption[] = [];
 
   public simpleForm: FormGroup;
 
@@ -53,7 +65,10 @@ export class HomeComponent implements OnInit {
     this.simpleForm.addControl(childName, childGroup);
   }
 
-  public showOption(value: any) {
+  public showOption(value: string) {
+    console.log(value)
+    this.subcategory2 = this.subcategory.filter(x => x.categoryId == value);
+    this.subcategory2.unshift({ id: '0', name: 'All' })
     this.selectedOption = value;
   }
 
