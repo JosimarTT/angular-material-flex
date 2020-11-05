@@ -66,9 +66,10 @@ export class HomeComponent implements OnInit {
   }
 
   public showOption(value: string) {
-    console.log(value)
+    console.log(this.simpleForm)
     this.subcategory2 = this.subcategory.filter(x => x.categoryId == value);
-    this.subcategory2.unshift({ id: '0', name: 'All' })
+    this.subcategory2.unshift({ id: '0', name: 'All' });
+    this.simpleForm.patchValue({ selectGroup2: '' });
     this.selectedOption = value;
   }
 
