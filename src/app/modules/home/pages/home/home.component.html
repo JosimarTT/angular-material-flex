@@ -72,3 +72,16 @@
     <mat-row *matRowDef="let row; columns: ['username', 'age', 'title','weight']"></mat-row>
   </mat-table>
 </div>
+
+<div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center">
+  <form [formGroup]="simpleForm">
+    <input placeholder="Name" matInput formControlName="name" />
+    <app-shared-select (onComponentReady)="addChild('selectGroup', $event)" (selectChanged)="showOption($event)"
+      [options]="options" required notEmpty>
+    </app-shared-select>
+  </form>
+
+  <div>Option selected: {{selectedOption?.name}}</div>
+  <hr>
+  <div>ID selected: {{selectedOption?.id}}</div>
+</div>

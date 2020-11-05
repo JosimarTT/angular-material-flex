@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { SimpleOption } from 'src/app/shared/components/shared-select/shared-select.component';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -27,9 +29,32 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+
+  options: SimpleOption[] = [
+    { id: '7', name: 'Option1' },
+    { id: '10', name: 'Option2' },
+    { id: '16', name: 'Option3' }
+  ];
+
+  public simpleForm: FormGroup;
+
+  public selectedOption: any;
+
+  constructor(private fb: FormBuilder) {
+    this.simpleForm = fb.group({
+      name: ['']
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  public addChild(childName: string, childGroup: FormGroup) {
+    this.simpleForm.addControl(childName, childGroup);
+  }
+
+  public showOption(value: any) {
+    this.selectedOption = value;
   }
 
 }

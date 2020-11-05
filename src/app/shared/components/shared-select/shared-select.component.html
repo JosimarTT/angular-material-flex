@@ -1,0 +1,15 @@
+<form [formGroup]="componentFormGroup">
+  <mat-form-field>
+    <mat-select placeholder="Simple Select" formControlName="select">
+      <mat-option *ngFor="let opt of options" [value]="opt">
+        {{opt.name}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="required && componentFormGroup.controls.select.hasError('required')">
+      This field is required.
+    </mat-error>
+    <mat-error *ngIf="!(options || options.length)">
+      Option list is empty.
+    </mat-error>
+  </mat-form-field>
+</form>
