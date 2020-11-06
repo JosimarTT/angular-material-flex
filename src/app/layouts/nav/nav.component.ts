@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,12 @@ export class NavComponent implements OnInit {
     { id: 2, name: "EN" }
   ]
   language = "EN";
+
+  examples = [
+    { link: 'home', label: 'Home' },
+    { link: 'home/testformgroup', label: 'TestForm' },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

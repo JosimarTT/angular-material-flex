@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SimpleOption } from 'src/app/shared/components/shared-select/shared-select.component';
 export interface PeriodicElement {
