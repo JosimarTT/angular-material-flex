@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
+<mat-toolbar color="primary" class="mat-elevation-z4">
   <div fxHide.gt-xs>
     <button mat-icon-button (click)="onToggleSidenav()">
       <mat-icon>menu</mat-icon>
@@ -8,13 +8,32 @@
     <a routerLink="/home">Owner-Account</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+    <ul fxLayout class="navigation-items">
       <li>
-        <a routerLink="/owner">Owner Actions</a>
+        <button mat-button>Manage users
+        </button>
       </li>
       <li>
-        <a routerLink="/account">Account Actions</a>
+        <button mat-button>Josimar&nbsp;<mat-icon>account_circle</mat-icon>
+        </button>
+      </li>
+      <li>
+        <button mat-button [matMenuTriggerFor]="menu">{{language}}
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item *ngFor="let option of options" (click)="onLanguageChange(option.id)">
+            {{option.name}}
+          </button>
+        </mat-menu>
+      </li>
+      <li>
       </li>
     </ul>
   </div>
 </mat-toolbar>
+<mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>

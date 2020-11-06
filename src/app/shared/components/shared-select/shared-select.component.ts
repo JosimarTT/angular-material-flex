@@ -47,10 +47,6 @@ export class SharedSelectComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(`ngOnInit():
-      required=${this._required}, checkEmpty=${this._notEmpy},
-      options=${this.options}`);
-    // construct validators list based on component input properties
     const validators = [];
     if (this.required) {
       validators.push(Validators.required)
