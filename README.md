@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 "# angular-material-flex" 
 
 ## Author
-*Josimar Javier Tantahuilta Torres, [GitHub] (https://github.com/JosimarTT/angular-material-flex)
+* Josimar Javier Tantahuilta Torres, [GitHub] (https://github.com/JosimarTT/angular-material-flex)
