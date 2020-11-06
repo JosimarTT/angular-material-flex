@@ -1,7 +1,7 @@
 # Template Angular / Material Design / Flex
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-Based on [Angular Folder Structure] (https://angular-folder-structure.readthedocs.io/en/latest/)
+Based on [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 "# angular-material-flex" 
 
 ## Author
-* Josimar Javier Tantahuilta Torres, [GitHub] (https://github.com/JosimarTT/angular-material-flex)
+* Josimar Javier Tantahuilta Torres, [GitHub](https://github.com/JosimarTT/angular-material-flex)
