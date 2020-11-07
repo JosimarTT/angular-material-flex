@@ -10,12 +10,16 @@ import { ContentLayoutComponent } from './layouts/content-layout/content-layout.
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { HttpErrorInterceptor } from './core/interceptors/http-error.interceptor';
+import { NavComponent } from './layouts/nav/nav.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
