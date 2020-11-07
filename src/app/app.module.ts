@@ -5,39 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import { FooterComponent } from './layouts/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
-import { NavComponent } from './layouts/nav/nav.component';
-import { AuthModule } from './modules/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './modules/home/home.module';
-import { CoreModule } from '@angular/flex-layout';
-import { SideNavComponent } from './layouts/side-nav/side-nav.component';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
-    FooterComponent,
-    ContentLayoutComponent,
-    NavComponent,
-    SideNavComponent,
+    ContentLayoutComponent
   ],
   imports: [
-    //angular
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     //modules
     AuthModule,
-    HomeModule,
 
     //core & shared
-    CoreModule,
     SharedModule
-  ],
-  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]

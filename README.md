@@ -1,7 +1,7 @@
-# Template Angular / Material Design / Flex
+# TimeAssistantBackOffice
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-Based on [Angular Folder Structure](https://angular-folder-structure.readthedocs.io/en/latest/)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -24,8 +24,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-"# angular-material-flex" 
-
-## Author
-* Josimar Javier Tantahuilta Torres, [GitHub](https://github.com/JosimarTT/angular-material-flex)
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

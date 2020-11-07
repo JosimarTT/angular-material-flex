@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content-layout',
@@ -7,13 +7,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ContentLayoutComponent implements OnInit {
 
-  @Output() sidenavClose = new EventEmitter();
-
   constructor() { }
 
   ngOnInit(): void {
   }
-  public onSidenavClose = () => {
-    this.sidenavClose.emit();
-  }
+
 }

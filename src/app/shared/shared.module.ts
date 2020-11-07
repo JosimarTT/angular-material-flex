@@ -1,25 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MaterialModule } from './modules/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharedSelectComponent } from './components/shared-select/shared-select.component';
+
+
 
 @NgModule({
-  declarations: [SharedSelectComponent],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    RouterModule
   ],
   exports: [
-    MaterialModule,
-    FlexLayoutModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedSelectComponent
+    RouterModule,
+
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
 export class SharedModule { }
