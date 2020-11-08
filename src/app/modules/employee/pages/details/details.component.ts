@@ -11,10 +11,10 @@ export class DetailsComponent implements OnInit {
   user: UserResponseV1 = new UserResponseV1();
   fullName: string;
   schedule: string = '08:00 - 14:00';
-  officeHours: string = '6 Hours';
-  startOfficeHours: string;
-  officeHoursNewValue: string;
-  validationSpan: string;
+  officeHours: string = '06:00';
+  startOfficeHours: string = '08:00';
+  officeHoursNewValue: string = '06:00';
+  validationSpan: string = '01:30';
 
 
   constructor() { }
