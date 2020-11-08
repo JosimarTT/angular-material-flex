@@ -37,7 +37,7 @@
     <div fxFlex fxFlexFill>
       <mat-form-field appearance="outline" fxFlex fxFlexFill>
         <mat-label>Start of Office Hours</mat-label>
-        <input matInput [ngxTimepicker]="startTime" [format]="24" />
+        <input matInput [ngxTimepicker]="startTime" [format]="24" readonly />
         <mat-icon matSuffix>schedule</mat-icon>
       </mat-form-field>
       <ngx-material-timepicker #startTime [minutesGap]="5" [appendToInput]="true" (timeSet)="startOfficeHours = $event">
@@ -47,7 +47,7 @@
     <div fxFlex fxFlexFill>
       <mat-form-field appearance="outline" fxFlex fxFlexFill>
         <mat-label>Office Hours</mat-label>
-        <input matInput [ngxTimepicker]="officeHoursEdit" [format]="24" />
+        <input matInput [ngxTimepicker]="officeHoursEdit" [format]="24" readonly />
         <mat-icon matSuffix>schedule</mat-icon>
       </mat-form-field>
       <ngx-material-timepicker #officeHoursEdit [minutesGap]="5" [appendToInput]="true"
@@ -58,7 +58,7 @@
     <div fxFlex fxFlexFill>
       <mat-form-field appearance="outline" fxFlex fxFlexFill>
         <mat-label>Validation Span</mat-label>
-        <input matInput [ngxTimepicker]="endTime" [format]="24" />
+        <input matInput [ngxTimepicker]="endTime" [format]="24" readonly />
         <mat-icon matSuffix>schedule</mat-icon>
       </mat-form-field>
       <ngx-material-timepicker #endTime [minutesGap]="30" [appendToInput]="true" (timeSet)="validationSpan = $event">
