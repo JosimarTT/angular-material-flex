@@ -21,8 +21,8 @@ export class ListComponent implements OnInit {
     console.log(this.employeeReq)
   }
 
-  aiuda() {
-    console.log(this.employeeReq)
+  getByFilters() {
+    console.log(this.employeeReq);
   }
 
 }

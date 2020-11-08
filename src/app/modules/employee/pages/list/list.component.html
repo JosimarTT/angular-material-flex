@@ -7,8 +7,8 @@
     <app-shared-template-driven-input fxFlex (newValue)="employeeReq.firstName = $event" appearance="outline"
       icon="edit" label="First Name">
     </app-shared-template-driven-input>
-    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.middleName = $event" appearance="outline"
-      icon="edit" label="Middle Name">
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.secondName = $event" appearance="outline"
+      icon="edit" label="Second Name">
     </app-shared-template-driven-input>
     <app-shared-template-driven-input fxFlex (newValue)="employeeReq.firstLastName = $event" appearance="outline"
       icon="edit" label="First Last Name">
@@ -29,9 +29,9 @@
 
   <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
     fxLayoutGap="20px">
-    <button mat-raised-button color="primary" fxFlex fxFlexFill (click)="aiuda()">Add User</button>
+    <a mat-raised-button color="primary" fxFlex fxFlexFill [routerLink]="['/employee/add']">Add User</a>
     <button mat-raised-button color="primary" fxFlex fxFlexFill>Clean Content</button>
-    <button mat-raised-button color="primary" fxFlex fxFlexFill>Search</button>
+    <button mat-raised-button color="primary" fxFlex fxFlexFill (click)="getByFilters()">Search</button>
   </div>
 
 </mat-card>

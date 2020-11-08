@@ -1,0 +1,22 @@
+<br>
+<h1>ADD EMPLOYEE</h1>
+
+<form (ngSubmit)="insert()">
+  <mat-card class="mat-elevation-z4">
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+      <app-shared-reactive-input fxFlex (onComponentReady)="addChild('firstName', $event)"
+        (onValueChange)="employeeReq.firstName = $event" appearance="outline" icon="edit" label="First Name" required
+        minLength="5" partialFormControlName="firstName">
+      </app-shared-reactive-input>
+      <app-shared-reactive-input fxFlex (onComponentReady)="addChild('secondName', $event)"
+        (onValueChange)="employeeReq.secondName = $event" appearance="outline" icon="edit" label="Second Name" required
+        minLength="10" partialFormControlName="secondName">
+      </app-shared-reactive-input>
+    </div>
+
+    <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center">
+      <button type="submit" mat-raised-button color="primary" fxFlex="33.33%">Add Employee</button>
+    </div>
+
+  </mat-card>
+</form>

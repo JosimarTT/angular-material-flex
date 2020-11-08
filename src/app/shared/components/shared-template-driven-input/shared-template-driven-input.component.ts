@@ -11,7 +11,6 @@ export class SharedTemplateDrivenInputComponent implements OnInit {
   @Input() label: string;
   @Input() placeholder: string;
   @Input() appearance: string;
-
   @Output() newValue = new EventEmitter<string>();
 
   constructor() { }
