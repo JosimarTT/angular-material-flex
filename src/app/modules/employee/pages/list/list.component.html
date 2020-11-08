@@ -4,20 +4,32 @@
 <mat-card class="mat-elevation-z4">
 
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
-    <app-shared-input fxFlex icon="edit"></app-shared-input>
-    <app-shared-input fxFlex icon="edit"></app-shared-input>
-    <app-shared-input fxFlex icon="edit"></app-shared-input>
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.firstName = $event" appearance="outline"
+      icon="edit" label="First Name">
+    </app-shared-template-driven-input>
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.middleName = $event" appearance="outline"
+      icon="edit" label="Middle Name">
+    </app-shared-template-driven-input>
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.firstLastName = $event" appearance="outline"
+      icon="edit" label="First Last Name">
+    </app-shared-template-driven-input>
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.secondLastName = $event" appearance="outline"
+      icon="edit" label="Second Last Name">
+    </app-shared-template-driven-input>
   </div>
 
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
-    <app-shared-input fxFlex icon="3d_rotation"></app-shared-input>
-    <app-shared-input fxFlex icon="3d_rotation"></app-shared-input>
-    <app-shared-input fxFlex icon="3d_rotation"></app-shared-input>
+    <app-shared-template-driven-input fxFlex (newValue)="employeeReq.employeeNumber = $event" appearance="outline"
+      icon="edit" label="Employee Number">
+    </app-shared-template-driven-input>
+    <div fxFlex></div>
+    <div fxFlex></div>
+    <div fxFlex></div>
   </div>
 
   <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
     fxLayoutGap="20px">
-    <button mat-raised-button color="primary" fxFlex fxFlexFill>Add User</button>
+    <button mat-raised-button color="primary" fxFlex fxFlexFill (click)="aiuda()">Add User</button>
     <button mat-raised-button color="primary" fxFlex fxFlexFill>Clean Content</button>
     <button mat-raised-button color="primary" fxFlex fxFlexFill>Search</button>
   </div>
