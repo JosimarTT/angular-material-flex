@@ -1,1 +1,36 @@
-<p>dashboard works!</p>
+<h1>Filters</h1>
+
+<mat-card class="mat-elevation-z4">
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Full Name</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Employee Code</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Schedule</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Office Hours</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center"
+    fxLayoutGap="20px">
+    <button type="submit" mat-raised-button color="primary" fxFlex="33.33%">Import to Excel</button>
+    <button type="submit" mat-raised-button color="primary" fxFlex="33.33%">Create Report</button>
+  </div>
+
+</mat-card>
+
+<h1>Report</h1>
