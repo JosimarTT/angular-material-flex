@@ -17,6 +17,9 @@
         </button>
         <span>TimeAssistantBackOffice</span>
         <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+          <!--dashboard-->
+          <button mat-button [routerLink]="['/dashboard']">Dashboard</button>
+          <!--employee-->
           <button mat-button [matMenuTriggerFor]="menu">Employee Management<mat-icon>arrow_drop_down</mat-icon></button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item [routerLink]="['/employee/list']">Employee

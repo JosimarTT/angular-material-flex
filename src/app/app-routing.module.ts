@@ -16,6 +16,12 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
+    path: 'dashboard',
+    component: ContentLayoutComponent,
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
+  },
+  {
     path: 'employee',
     component: ContentLayoutComponent,
     loadChildren: () =>
