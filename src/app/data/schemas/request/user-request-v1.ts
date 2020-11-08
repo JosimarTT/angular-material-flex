@@ -1,7 +1,7 @@
-export class EmployeeRequestV1 {
+export class UserRequestV1 {
   firstName: string;
   secondName: string;
   firstLastName: string;
   secondLastName: string;
-  employeeNumber: string;
+  userCode: string;
 }

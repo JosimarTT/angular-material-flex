@@ -25,11 +25,10 @@ export class SharedReactiveInputComponent implements OnInit {
   @Input() placeholder: string;
   @Input() appearance: string;
   @Input() newValue: EventEmitter<string> = new EventEmitter();
+  @Input() partialFormControlName: string;
 
   @Output() onComponentReady: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
   @Output() onValueChange: EventEmitter<any> = new EventEmitter<any>();
-
-  @Input() partialFormControlName: string;
 
   constructor(
     private formBuilder: FormBuilder

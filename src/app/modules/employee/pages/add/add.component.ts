@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { EmployeeRequestV1 } from 'src/app/data/schemas/request/employee-request-v1';
+import { Router } from '@angular/router';
+import { UserRequestV1 } from 'src/app/data/schemas/request/user-request-v1';
 
 @Component({
   selector: 'app-add',
@@ -9,11 +10,12 @@ import { EmployeeRequestV1 } from 'src/app/data/schemas/request/employee-request
 })
 export class AddComponent implements OnInit {
 
-  employeeReq: EmployeeRequestV1 = new EmployeeRequestV1();
+  userReq: UserRequestV1 = new UserRequestV1();
   employeeForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.employeeForm = formBuilder.group({});
   }
@@ -26,9 +28,13 @@ export class AddComponent implements OnInit {
   }
 
   insert() {
+
+    this.employeeForm.markAllAsTouched();
+
     console.log(this.employeeForm.valid)
+    console.log(this.userReq);
     if (this.employeeForm.valid) {
-      console.log(this.employeeReq)
+      this.router.navigateByUrl('/employee/list');
     }
   }
 

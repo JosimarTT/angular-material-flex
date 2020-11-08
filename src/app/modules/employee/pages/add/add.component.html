@@ -5,13 +5,31 @@
   <mat-card class="mat-elevation-z4">
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
       <app-shared-reactive-input fxFlex (onComponentReady)="addChild('firstName', $event)"
-        (onValueChange)="employeeReq.firstName = $event" appearance="outline" icon="edit" label="First Name" required
-        minLength="5" partialFormControlName="firstName">
+        (onValueChange)="userReq.firstName = $event" appearance="outline" icon="edit" label="First Name" required
+        minLength="1" partialFormControlName="firstName">
       </app-shared-reactive-input>
       <app-shared-reactive-input fxFlex (onComponentReady)="addChild('secondName', $event)"
-        (onValueChange)="employeeReq.secondName = $event" appearance="outline" icon="edit" label="Second Name" required
-        minLength="10" partialFormControlName="secondName">
+        (onValueChange)="userReq.secondName = $event" appearance="outline" icon="edit" label="Second Name" required
+        minLength="1" partialFormControlName="secondName">
       </app-shared-reactive-input>
+      <app-shared-reactive-input fxFlex (onComponentReady)="addChild('firstLastName', $event)"
+        (onValueChange)="userReq.firstLastName = $event" appearance="outline" icon="edit" label="First Last Name"
+        required minLength="1" partialFormControlName="firstLastName">
+      </app-shared-reactive-input>
+      <app-shared-reactive-input fxFlex (onComponentReady)="addChild('secondLastName', $event)"
+        (onValueChange)="userReq.secondLastName = $event" appearance="outline" icon="edit" label="Second Last Name"
+        required minLength="1" partialFormControlName="secondLastName">
+      </app-shared-reactive-input>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+      <app-shared-reactive-input fxFlex (onComponentReady)="addChild('userCode', $event)"
+        (onValueChange)="userReq.userCode = $event" appearance="outline" icon="edit" label="User Code" required
+        minLength="1" partialFormControlName="userCode">
+      </app-shared-reactive-input>
+      <div fxFlex></div>
+      <div fxFlex></div>
+      <div fxFlex></div>
     </div>
 
     <div class="content" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center">

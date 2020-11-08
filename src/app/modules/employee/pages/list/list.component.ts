@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeRequestV1 } from 'src/app/data/schemas/request/employee-request-v1';
+import { UserRequestV1 } from 'src/app/data/schemas/request/user-request-v1';
 
 @Component({
   selector: 'app-list',
@@ -8,7 +8,7 @@ import { EmployeeRequestV1 } from 'src/app/data/schemas/request/employee-request
 })
 export class ListComponent implements OnInit {
 
-  employeeReq: EmployeeRequestV1 = new EmployeeRequestV1();
+  userReq: UserRequestV1 = new UserRequestV1();
 
   constructor() { }
 
@@ -17,12 +17,12 @@ export class ListComponent implements OnInit {
   setValue(value: string, req: any) {
     console.log(req);
     console.log(value);
-    this.employeeReq.firstName = value;
-    console.log(this.employeeReq)
+    this.userReq.firstName = value;
+    console.log(this.userReq)
   }
 
   getByFilters() {
-    console.log(this.employeeReq);
+    console.log(this.userReq);
   }
 
 }
