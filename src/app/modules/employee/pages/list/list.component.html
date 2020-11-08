@@ -4,24 +4,34 @@
 <mat-card class="mat-elevation-z4">
 
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
-    <app-shared-template-driven-input fxFlex (newValue)="userReq.firstName = $event" appearance="outline" icon="edit"
-      label="First Name">
-    </app-shared-template-driven-input>
-    <app-shared-template-driven-input fxFlex (newValue)="userReq.secondName = $event" appearance="outline" icon="edit"
-      label="Second Name">
-    </app-shared-template-driven-input>
-    <app-shared-template-driven-input fxFlex (newValue)="userReq.firstLastName = $event" appearance="outline"
-      icon="edit" label="First Last Name">
-    </app-shared-template-driven-input>
-    <app-shared-template-driven-input fxFlex (newValue)="userReq.secondLastName = $event" appearance="outline"
-      icon="edit" label="Second Last Name">
-    </app-shared-template-driven-input>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>First Name</mat-label>
+      <input matInput [(ngModel)]="userReq.firstName">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Second Name</mat-label>
+      <input matInput [(ngModel)]="userReq.secondName">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>First Last Name</mat-label>
+      <input matInput [(ngModel)]="userReq.firstLastName">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Second Last Name</mat-label>
+      <input matInput [(ngModel)]="userReq.secondLastName">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
   </div>
 
   <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
-    <app-shared-template-driven-input fxFlex (newValue)="userReq.userCode = $event" appearance="outline" icon="edit"
-      label="Employee Number">
-    </app-shared-template-driven-input>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Employee</mat-label>
+      <input matInput [(ngModel)]="userReq.userCode">
+      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
     <div fxFlex></div>
     <div fxFlex></div>
     <div fxFlex></div>

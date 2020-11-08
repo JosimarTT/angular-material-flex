@@ -6,17 +6,13 @@ import { MaterialModule } from './modules/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedReactiveInputComponent } from './components/shared-reactive-input/shared-reactive-input.component';
 import { SharedReactiveSelectComponent } from './components/shared-reactive-select/shared-reactive-select.component';
-import { SharedTemplateDrivenInputComponent } from './components/shared-template-driven-input/shared-template-driven-input.component';
-import { SharedTemplateDrivenSelectComponent } from './components/shared-template-driven-select/shared-template-driven-select.component';
 
 
 
 @NgModule({
   declarations: [
     SharedReactiveInputComponent,
-    SharedReactiveSelectComponent,
-    SharedTemplateDrivenInputComponent,
-    SharedTemplateDrivenSelectComponent
+    SharedReactiveSelectComponent
   ],
   imports: [
     CommonModule,
@@ -37,9 +33,7 @@ import { SharedTemplateDrivenSelectComponent } from './components/shared-templat
     FlexLayoutModule,
 
     SharedReactiveInputComponent,
-    SharedReactiveSelectComponent,
-    SharedTemplateDrivenInputComponent,
-    SharedTemplateDrivenSelectComponent
+    SharedReactiveSelectComponent
   ]
 })
 export class SharedModule { }
