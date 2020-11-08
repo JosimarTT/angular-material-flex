@@ -1,1 +1,54 @@
-<p>details works!</p>
+<br>
+<h1>EMPLOYEE DETAILS</h1>
+<br>
+<h1>GENERAL INFORMATION</h1>
+
+<mat-card class="mat-elevation-z4">
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Full Name</mat-label>
+      <input matInput [value]="fullName" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Employee Code</mat-label>
+      <input matInput [value]="user.userCode" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Schedule</mat-label>
+      <input matInput [value]="schedule" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Office Hours</mat-label>
+      <input matInput [value]="officeHours" readonly>
+    </mat-form-field>
+  </div>
+
+</mat-card>
+
+<br>
+<br>
+<h1>SCHEDULE</h1>
+
+<mat-card class="mat-elevation-z4">
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Start of Office Hours</mat-label>
+      <input matInput value="08:00">
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Office Hours</mat-label>
+      <input matInput value="6 Hours">
+    </mat-form-field>
+    <mat-form-field appearance="outline" fxFlex fxFlexFill>
+      <mat-label>Validation Span</mat-label>
+      <input matInput value="01:30 Hours">
+    </mat-form-field>
+  </div>
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center" fxLayoutGap="20px">
+    <button type="submit" mat-raised-button color="primary" fxFlex="33.33%">Edit</button>
+  </div>
+
+</mat-card>

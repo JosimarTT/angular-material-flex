@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserResponseV1 } from 'src/app/data/schemas/response/user-response-v1';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
+  user: UserResponseV1 = new UserResponseV1();
+  fullName: string;
+  schedule: string = '08:00 - 14:00';
+  officeHours: string = '6 Hours';
+
   constructor() { }
 
   ngOnInit(): void {
+    this.user.firstName = 'Josimar';
+    this.user.secondName = 'Javier';
+    this.user.firstLastName = 'Tantahuilca';
+    this.user.secondLastName = 'Torres';
+    this.user.userCode = '1234';
+
+    this.fullName = this.user.firstLastName + ' ' + this.user.secondName + ' ' + this.user.firstLastName + ' ' + this.user.secondLastName;
   }
 
 }
