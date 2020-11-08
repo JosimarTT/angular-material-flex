@@ -21,6 +21,8 @@ export class AddComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    document.getElementById('nav2Title').innerHTML = 'Add Employee';
   }
 
   public addChild(childName: string, childGroup: FormGroup) {

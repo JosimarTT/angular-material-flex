@@ -20,6 +20,8 @@ export class DetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    document.getElementById('nav2Title').innerHTML = 'Employee Details';
     this.user.firstName = 'Josimar';
     this.user.secondName = 'Javier';
     this.user.firstLastName = 'Tantahuilca';

@@ -13,6 +13,8 @@ export class ListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    document.getElementById('nav2Title').innerHTML = 'Employee List';
   }
   setValue(value: string, req: any) {
     console.log(req);

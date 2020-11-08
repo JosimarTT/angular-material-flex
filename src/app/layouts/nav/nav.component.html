@@ -10,17 +10,29 @@
   </mat-sidenav>
   <mat-sidenav-content fxLayout="column">
     <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>TimeAssistantBackOffice</span>
-      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <button mat-button>Manage users
+      <mat-toolbar-row class="mat-elevation-z4">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <button mat-button>Josimar&nbsp;<mat-icon>account_circle</mat-icon>
-        </button>
-      </div>
+        <span>TimeAssistantBackOffice</span>
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+          <button mat-button [matMenuTriggerFor]="menu">Employee Management<mat-icon>arrow_drop_down</mat-icon></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item [routerLink]="['/employee/list']">Employee
+              List</button>
+            <button mat-menu-item [routerLink]="['/employee/add']">Add
+              Employee</button>
+          </mat-menu>
+          <button mat-button>Josimar&nbsp;<mat-icon>account_circle</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar-row>
+
+      <mat-toolbar-row>
+        <span id="nav2Title"></span>
+      </mat-toolbar-row>
+
     </mat-toolbar>
     <main>
       <div fxFlex></div>
