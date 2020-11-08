@@ -6,6 +6,7 @@ import { MaterialModule } from './modules/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedReactiveInputComponent } from './components/shared-reactive-input/shared-reactive-input.component';
 import { SharedReactiveSelectComponent } from './components/shared-reactive-select/shared-reactive-select.component';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 
 
@@ -21,7 +22,8 @@ import { SharedReactiveSelectComponent } from './components/shared-reactive-sele
     RouterModule,
 
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxMaterialTimepickerModule
   ],
   exports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { SharedReactiveSelectComponent } from './components/shared-reactive-sele
 
     MaterialModule,
     FlexLayoutModule,
+    NgxMaterialTimepickerModule,
 
     SharedReactiveInputComponent,
     SharedReactiveSelectComponent

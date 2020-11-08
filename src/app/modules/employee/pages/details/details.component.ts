@@ -12,6 +12,10 @@ export class DetailsComponent implements OnInit {
   fullName: string;
   schedule: string = '08:00 - 14:00';
   officeHours: string = '6 Hours';
+  startOfficeHours: string;
+  officeHoursNewValue: string;
+  validationSpan: string;
+
 
   constructor() { }
 
@@ -23,6 +27,12 @@ export class DetailsComponent implements OnInit {
     this.user.userCode = '1234';
 
     this.fullName = this.user.firstLastName + ' ' + this.user.secondName + ' ' + this.user.firstLastName + ' ' + this.user.secondLastName;
+  }
+
+  edit() {
+    console.log(this.startOfficeHours);
+    console.log(this.officeHoursNewValue);
+    console.log(this.validationSpan);
   }
 
 }
